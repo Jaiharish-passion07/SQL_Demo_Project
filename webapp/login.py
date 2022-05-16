@@ -1,8 +1,5 @@
 from pglet import Button,Stack
-
-
-from webapp.stu_sign_up import *
-from webapp.faculty_signup import *
+from webapp.signup_page import *
 
 
 with pglet.page("Management") as page:
@@ -30,9 +27,9 @@ with pglet.page("Management") as page:
 
             if self.tb1.value!='' and self.tb2.value!='':
                 if self.user=="Faculty User-Id":
-                    staff_signup()
+                    signup_display(label="Faculty Name")
                 elif self.user=="Student -Id":
-                    student_signup()
+                    signup_display(label="Student Name")
 
             self.view.update()
 
